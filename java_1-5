@@ -1,0 +1,106 @@
+1
+
+
+import java.util.Scanner;
+
+public class ain {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Введите число: ");
+        int number = scanner.nextInt();
+        if (isEven(number)) {
+            System.out.println(number + " - четное число.");
+        } else {
+            System.out.println(number + " - нечетное число.");
+        }
+        scanner.close();
+    }
+    public static boolean isEven(int num) {
+        return num % 2 == 0;
+    }
+}
+_______________________________________________________________________________________________
+
+2
+import java.util.Scanner;
+
+public class ain{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Введите строку: ");
+        String inputString = scanner.nextLine();
+        if (inputString.length() > 1) {
+            char preLastChar = inputString.charAt(inputString.length() - 2);
+
+            System.out.println("Предпоследний символ: " + preLastChar);
+        } else {
+            System.out.println("Введена строка с одним или менее символами.");
+        }
+
+        scanner.close();
+    }
+}
+_______________________________________________________________________________________________
+
+3
+public class ain {
+    public static void main(String[] args) {
+        int start = 1;
+        int end = 1000;
+        int sum = ain(start, end);
+        System.out.println("Сумма всех нечетных чисел от " + start + " до " + end + ": " + sum);
+    }
+    public static int ain(int start, int end) {
+        int sum = 0;
+        for (int i = start; i <= end; i++) {
+            if (i % 2 != 0) {
+                sum += i;
+            }
+        }
+_______________________________________________________________________________________________
+
+4        
+        public class ain {
+    public static void main(String[] args) {
+        int a = 10;
+        int b = 20;
+        int area = calculateArea(a, b);
+        int perimeter = calculatePerimeter(a, b);
+        System.out.println("Площадь прямоугольника: " + area);
+        System.out.println("Периметр прямоугольника: " + perimeter);
+    }
+    public static int calculateArea(int length, int width) {
+        return length * width;
+    }
+    public static int calculatePerimeter(int length, int width) {
+        return 2 * (length + width);
+    }
+}
+_______________________________________________________________________________________________
+
+
+5
+class five {
+    public static void main(String[] args) {
+        int[] numbers = {123, 45, 6789, 3210, 9876, 54321};
+        System.out.println("Числа, состоящие более чем из трех цифр:");
+
+        for (int number : numbers) {
+            if (hasMoreThanThreeDigits(number)) {
+                System.out.println(number);
+            }
+        }
+    }
+    public static boolean hasMoreThanThreeDigits(int num) {
+        int digitCount = 0;
+        while (num != 0) {
+            num /= 10;
+            digitCount++;
+        }
+        return digitCount > 3;
+    }
+}
+_______________________________________________________________________________________________
+
+
